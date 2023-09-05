@@ -1,7 +1,6 @@
 import { Flex, chakra, useCheckbox } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 
-import React from "react";
 import { CustomCheckboxProps } from "../../types/CustomCheckboxProps";
 
 export default function CustomCheckbox({
@@ -11,7 +10,7 @@ export default function CustomCheckbox({
   const { getCheckboxProps, getInputProps } = useCheckbox();
 
   return (
-    <chakra.label cursor="pointer">
+    <chakra.label cursor={"pointer"}>
       <input
         {...getInputProps()}
         hidden
@@ -19,10 +18,10 @@ export default function CustomCheckbox({
         onChange={handleChange}
       />
       <Flex
-        alignItems="center"
-        justifyContent="center"
-        border="1px solid"
-        borderColor="#ccc"
+        alignItems={"center"}
+        justifyContent={"center"}
+        border={"1px solid"}
+        borderColor={"#ccc"}
         w={8}
         h={8}
         borderRadius={"100%"}

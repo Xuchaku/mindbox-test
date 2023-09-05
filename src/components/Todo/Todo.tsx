@@ -1,22 +1,19 @@
+import { memo } from "react";
 import { Box, HStack, Text } from "@chakra-ui/react";
-import React, { memo } from "react";
-import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
+
+import CustomCheckbox from "../CustomCheckbox";
 
 import { TodoProps } from "../../types/TodoProps";
 
 function Todo({ todo, handleChange }: TodoProps) {
   const { completed, id, text } = todo;
-  const styles = {
-    as: completed ? "s" : "",
-    color: completed ? "gray.200" : "",
-  };
 
   return (
     <Box
-      bg="white"
-      w="100%"
+      bg={"white"}
+      w={"100%"}
       p={4}
-      color="black"
+      color={"black"}
       borderBottom={"1px solid #ccc"}
     >
       <HStack justify={"flex-start"}>
@@ -24,7 +21,12 @@ function Todo({ todo, handleChange }: TodoProps) {
           cheked={completed}
           handleChange={handleChange.bind(null, id)}
         />
-        <Text fontWeight={"thin"} fontSize="3xl" {...styles}>
+        <Text
+          fontWeight={"thin"}
+          fontSize={"3xl"}
+          as={completed ? "s" : undefined}
+          color={completed ? "gray.200" : undefined}
+        >
           {text}
         </Text>
       </HStack>

@@ -1,5 +1,5 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
 import { ChangeEvent, KeyboardEvent, memo, useState } from "react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputLeftElement, Box } from "@chakra-ui/react";
 
 import { InputAddProps } from "../../types/InputAddProps";
@@ -19,15 +19,15 @@ function InputAdd({ handleSubmit }: InputAddProps) {
   return (
     <Box p={4} borderBottom={"1px solid #ccc"}>
       <InputGroup>
-        <InputLeftElement pointerEvents="none">
-          <ChevronDownIcon boxSize={10} color="gray.300" />
+        <InputLeftElement pointerEvents={"none"}>
+          <ChevronDownIcon boxSize={10} color={"gray.300"} />
         </InputLeftElement>
         <Input
           value={text}
-          variant="unstyled"
+          variant={"unstyled"}
           ml={5}
           fontSize={32}
-          placeholder="What needs to be done?"
+          placeholder={"What needs to be done?"}
           border={"none"}
           _placeholder={{ color: "gray.200" }}
           color={"gray.400"}

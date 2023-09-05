@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -7,7 +8,7 @@ import {
   TabList,
   Tabs,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+
 import { tabStyle } from "../../const";
 import { Filter } from "../../types/Filter";
 
@@ -27,12 +28,11 @@ export default function Activities({
     setActiveIndex(index);
     setFilter(tabs[index]);
   }
-  console.log("rerre");
 
   return (
     <Flex p={4}>
       <Box>
-        <Button fontWeight={"light"} colorScheme="brand" variant="ghost">
+        <Button fontWeight={"light"} colorScheme={"brand"} variant={"ghost"}>
           {itemsLeft} items left
         </Button>
       </Box>
@@ -54,8 +54,8 @@ export default function Activities({
       <Box>
         <Button
           fontWeight={"light"}
-          colorScheme="brand"
-          variant="ghost"
+          colorScheme={"brand"}
+          variant={"ghost"}
           onClick={handleClear}
         >
           Clear completed

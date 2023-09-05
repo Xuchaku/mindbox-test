@@ -1,5 +1,5 @@
 import { Center, Heading } from "@chakra-ui/react";
-import List from "./components/List/List";
+import List from "./components/List";
 import styles from "./App.module.scss";
 
 function App() {
