@@ -22,14 +22,16 @@ export default function List({ initTodos }: { initTodos: Task[] }) {
     });
   }, []);
 
-  const addTodo = (text: string) => {
-    const newTask: Task = {
-      text,
-      id: todos[todos.length - 1].id + 1,
-      completed: false,
-    };
-    setTodos([...todos, newTask]);
-  };
+  const memoAddTodo = useCallback((text: string) => {
+    setTodos((prevTodos) => [
+      ...prevTodos,
+      {
+        text,
+        id: prevTodos[prevTodos.length - 1].id + 1,
+        completed: false,
+      },
+    ]);
+  }, []);
 
   function clearTodos() {
     setTodos((prevTodos) => {
@@ -51,7 +53,7 @@ export default function List({ initTodos }: { initTodos: Task[] }) {
 
   return (
     <Container maxW="2xl" className={styles.list} p={0}>
-      <InputAdd handleSubmit={addTodo} />
+      <InputAdd handleSubmit={memoAddTodo} />
       <VStack align="stretch" spacing={0}>
         {filteredTodos.map((todo) => {
           return (
