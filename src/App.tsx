@@ -1,6 +1,7 @@
 import { Center, Heading } from "@chakra-ui/react";
 import List from "./components/List";
 import styles from "./App.module.scss";
+import { TODOS_MOCK } from "./const";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
           todos
         </Heading>
       </Center>
-      <List />
+      <List initTodos={TODOS_MOCK} />
     </>
   );
 }

@@ -1,7 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import { Container, VStack } from "@chakra-ui/react";
 
-import { TODOS_MOCK } from "../../const";
 import Activities from "../Activities";
 import Todo from "../Todo";
 import InputAdd from "../InputAdd";
@@ -11,8 +10,8 @@ import { Task } from "../../types/Task";
 
 import styles from "./List.module.scss";
 
-export default function List() {
-  const [todos, setTodos] = useState<Task[]>(TODOS_MOCK);
+export default function List({ initTodos }: { initTodos: Task[] }) {
+  const [todos, setTodos] = useState<Task[]>(initTodos);
   const [filter, setFilter] = useState<Filter>("All");
 
   const memoChangeTodoCheck = useCallback((id: number) => {
