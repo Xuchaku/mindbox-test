@@ -452,6 +452,12 @@ exports[`Activities component list snapshot 1`] = `
             </button>
           </div>
         </div>
+        <div
+          class="css-qvz413"
+        />
+        <div
+          class="css-w8akdn"
+        />
       </div>
     </div>
   </body>,
@@ -672,6 +678,12 @@ exports[`Activities component list snapshot 1`] = `
           </button>
         </div>
       </div>
+      <div
+        class="css-qvz413"
+      />
+      <div
+        class="css-w8akdn"
+      />
     </div>
   </div>,
   "debug": [Function],

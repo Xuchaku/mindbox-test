@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
-import { Container, VStack } from "@chakra-ui/react";
+import { Box, Container, VStack } from "@chakra-ui/react";
 
 import Activities from "../Activities";
 import Todo from "../Todo";
@@ -64,6 +64,18 @@ export default function List({ initTodos }: { initTodos: Task[] }) {
         setFilter={setFilter}
         handleClear={clearTodos}
       />
+      <Box
+        className={styles.firstShadow}
+        w={"99%"}
+        height={2}
+        bgColor={"white"}
+      ></Box>
+      <Box
+        className={styles.secondShadow}
+        w={"98%"}
+        height={2}
+        bgColor={"white"}
+      ></Box>
     </Container>
   );
 }
